@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farouk Mselmi — Associate Professor of Mathematical Statistics</title>
+<meta name="description" content="Farouk Mselmi, Associate Professor at the Euro-Mediterranean University of Fez, Morocco. Research in generalized linear models, mathematical statistics, mixture models and stable processes.">
+<meta name="author" content="Farouk Mselmi">
+<meta property="og:title" content="Farouk Mselmi — Associate Professor of Mathematical Statistics">
+<meta property="og:description" content="Generalized linear models, natural exponential families, mixture models and stable processes. Euro-Mediterranean University of Fez, Morocco.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%238b2e3c'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='%23fff' text-anchor='middle'>FM</text></svg>">
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root{
+  --bg:#fdfcfa;
+  --bg-raised:#ffffff;
+  --bg-sunken:#f4f1ec;
+  --ink:#1c1a19;
+  --ink-soft:#4a4644;
+  --ink-faint:#7c7673;
+  --rule:#e2dcd4;
+  --rule-strong:#cfc7bd;
+  --accent:#8b2e3c;
+  --accent-soft:#f3e7e8;
+  --accent-ink:#6d2430;
+  --shadow:0 1px 2px rgba(28,26,25,.05), 0 8px 24px -12px rgba(28,26,25,.12);
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --maxw:820px;
+  --sidebar:240px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171b;
+    --bg-raised:#1c1f24;
+    --bg-sunken:#111316;
+    --ink:#e9e6e2;
+    --ink-soft:#b4afa9;
+    --ink-faint:#86817b;
+    --rule:#2b2f36;
+    --rule-strong:#3a3f47;
+    --accent:#e09aa5;
+    --accent-soft:#2c2023;
+    --accent-ink:#f0bcc4;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171b;
+  --bg-raised:#1c1f24;
+  --bg-sunken:#111316;
+  --ink:#e9e6e2;
+  --ink-soft:#b4afa9;
+  --ink-faint:#86817b;
+  --rule:#2b2f36;
+  --rule-strong:#3a3f47;
+  --accent:#e09aa5;
+  --accent-soft:#2c2023;
+  --accent-ink:#f0bcc4;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;text-underline-offset:2px}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.shell{display:flex;align-items:flex-start;max-width:1180px;margin:0 auto}
+
+/* ---- sidebar ---- */
+.sidebar{
+  position:sticky;top:0;
+  width:var(--sidebar);flex:0 0 var(--sidebar);
+  height:100vh;
+  padding:2.75rem 1.25rem 2rem 1.75rem;
+  border-right:1px solid var(--rule);
+  overflow-y:auto;
+}
+.brand{display:block;margin-bottom:.35rem}
+.brand-name{display:block;font-family:var(--serif);font-size:1.22rem;font-weight:700;color:var(--ink);letter-spacing:-.01em;line-height:1.15}
+.brand-role{display:block;font-size:.78rem;color:var(--ink-faint);margin-top:.3rem;line-height:1.45}
+.brand:hover{text-decoration:none}
+.brand:hover .brand-name{color:var(--accent)}
+.nav{margin-top:1.9rem;border-top:1px solid var(--rule);padding-top:1.1rem}
+.nav a{
+  display:block;
+  padding:.3rem 0 .3rem .7rem;
+  font-size:.835rem;color:var(--ink-soft);
+  border-left:2px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.nav a:hover{color:var(--ink);text-decoration:none}
+.nav a.active{color:var(--accent);border-left-color:var(--accent);font-weight:500}
+.side-foot{margin-top:1.6rem;padding-top:1.1rem;border-top:1px solid var(--rule);font-size:.76rem;color:var(--ink-faint)}
+.side-foot a{display:inline-block;margin-right:.6rem;font-size:.78rem}
+
+/* ---- main ---- */
+.main{flex:1 1 auto;min-width:0;padding:2.75rem 2.5rem 5rem;max-width:calc(var(--maxw) + 5rem)}
+
+/* ---- mobile nav ---- */
+.topbar{
+  display:none;
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+  padding:.7rem 1rem;
+  align-items:center;justify-content:space-between;gap:.75rem;
+}
+.topbar-name{font-family:var(--serif);font-weight:700;font-size:1rem}
+.menu-btn{
+  appearance:none;border:1px solid var(--rule-strong);background:var(--bg-raised);
+  color:var(--ink);border-radius:7px;padding:.35rem .7rem;font:inherit;font-size:.82rem;cursor:pointer;
+}
+.drawer{display:none;border-bottom:1px solid var(--rule);background:var(--bg-raised);padding:.5rem 1rem 1rem}
+.drawer.open{display:block}
+.drawer a{display:block;padding:.4rem 0;font-size:.9rem;color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+.drawer a:last-child{border-bottom:0}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{margin-bottom:2.5rem}
+.hero-top{display:flex;gap:1.5rem;align-items:flex-start}
+.monogram{
+  flex:0 0 84px;width:84px;height:84px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:grid;place-items:center;
+  font-family:var(--serif);font-size:1.9rem;font-weight:600;letter-spacing:.02em;
+  box-shadow:var(--shadow);
+}
+h1{font-size:clamp(1.85rem,4.6vw,2.6rem);font-weight:700;letter-spacing:-.02em}
+.hero-title{font-family:var(--serif);font-size:1.07rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.45}
+.hero-affil{font-size:.93rem;color:var(--ink-faint);margin-top:.15rem}
+.hero-lede{
+  margin-top:1.4rem;
+  font-family:var(--serif);font-size:1.08rem;line-height:1.62;color:var(--ink-soft);
+  border-left:3px solid var(--accent);padding-left:1.1rem;
+}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.5rem .95rem;border-radius:8px;
+  font-size:.86rem;font-weight:500;
+  border:1px solid var(--rule-strong);background:var(--bg-raised);color:var(--ink);
+  transition:border-color .15s, transform .15s;
+}
+.btn:hover{text-decoration:none;border-color:var(--accent);transform:translateY(-1px)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-primary{color:#1b1013}}
+:root[data-theme="dark"] .btn-primary{color:#1b1013}
+:root[data-theme="light"] .btn-primary{color:#fff}
+.btn-primary:hover{border-color:var(--accent)}
+
+/* ---- stat strip ---- */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden;
+  margin-top:2rem;
+}
+.stat{background:var(--bg-raised);padding:.85rem .9rem}
+.stat-n{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--accent);line-height:1}
+.stat-l{font-size:.73rem;color:var(--ink-faint);margin-top:.3rem;line-height:1.3}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{margin-top:3.25rem;scroll-margin-top:1.5rem}
+.sec-head{
+  display:flex;align-items:baseline;gap:.75rem;
+  padding-bottom:.5rem;margin-bottom:1.35rem;
+  border-bottom:2px solid var(--rule-strong);
+}
+.sec-head h2{font-size:1.32rem;letter-spacing:-.01em}
+.sec-head .count{font-size:.78rem;color:var(--ink-faint);font-family:var(--sans)}
+h3.sub{
+  font-size:.79rem;font-family:var(--sans);font-weight:600;
+  text-transform:uppercase;letter-spacing:.09em;color:var(--ink-faint);
+  margin:2rem 0 .9rem;
+}
+h3.sub:first-of-type{margin-top:0}
+
+/* ---- key/value grid ---- */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1.1rem;font-size:.94rem}
+.kv dt{color:var(--ink-faint);font-size:.86rem;white-space:nowrap}
+.kv dd{margin:0;color:var(--ink)}
+
+/* ---- address cards ---- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1rem}
+.card{
+  background:var(--bg-raised);border:1px solid var(--rule);border-radius:10px;
+  padding:1.05rem 1.15rem;
+}
+.card h4{font-size:.76rem;font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);margin-bottom:.5rem}
+.card address{font-style:normal;font-size:.91rem;line-height:1.6;color:var(--ink-soft)}
+
+/* ---- tag list ---- */
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tag{
+  font-size:.83rem;padding:.3rem .7rem;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-ink);border:1px solid transparent;
+}
+.tag-plain{background:var(--bg-sunken);color:var(--ink-soft);border-color:var(--rule)}
+
+/* ---- timeline ---- */
+.timeline{position:relative;padding-left:1.35rem}
+.timeline::before{content:"";position:absolute;left:4px;top:.5rem;bottom:.5rem;width:1px;background:var(--rule-strong)}
+.tl-item{position:relative;padding-bottom:1.25rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-1.35rem;top:.52rem;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--rule-strong);
+}
+.tl-item.now::before{background:var(--accent);border-color:var(--accent)}
+.tl-role{font-family:var(--serif);font-size:1.03rem;font-weight:600}
+.tl-meta{font-size:.87rem;color:var(--ink-faint);margin-top:.1rem}
+.tl-date{font-size:.8rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;margin-top:.2rem}
+.badge-now{
+  display:inline-block;margin-left:.45rem;vertical-align:.1em;
+  font-family:var(--sans);font-size:.67rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--accent);color:#fff;padding:.12rem .42rem;border-radius:4px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .badge-now{color:#1b1013}}
+:root[data-theme="dark"] .badge-now{color:#1b1013}
+
+/* ---- degree blocks ---- */
+.degree{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.degree:last-child{border-bottom:0}
+.degree-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;align-items:baseline}
+.degree-name{font-family:var(--serif);font-size:1.04rem;font-weight:600}
+.degree-date{font-size:.8rem;color:var(--ink-faint);font-variant-numeric:tabular-nums;white-space:nowrap}
+.degree-inst{font-size:.9rem;color:var(--ink-soft);margin-top:.12rem}
+.degree-thesis{font-size:.92rem;margin-top:.5rem;color:var(--ink)}
+.degree-thesis em{font-family:var(--serif);font-size:1rem}
+.jury{margin-top:.6rem;font-size:.855rem;color:var(--ink-soft)}
+.jury summary{cursor:pointer;color:var(--accent);font-size:.84rem;list-style:none;display:inline-flex;align-items:center;gap:.3rem}
+.jury summary::-webkit-details-marker{display:none}
+.jury summary::before{content:"▸";font-size:.7rem;transition:transform .15s}
+.jury[open] summary::before{transform:rotate(90deg)}
+.jury ul{margin-top:.55rem;padding-left:.2rem}
+.jury li{padding:.14rem 0;line-height:1.5}
+.jury li b{font-weight:600;color:var(--ink)}
+
+/* ---- publications ---- */
+.pubs{counter-reset:none}
+.pub{display:flex;gap:.85rem;padding:.95rem 0;border-bottom:1px solid var(--rule)}
+.pub:last-child{border-bottom:0}
+.pub-n{
+  flex:0 0 1.85rem;
+  font-family:var(--serif);font-size:.92rem;font-weight:600;
+  color:var(--ink-faint);font-variant-numeric:tabular-nums;
+  text-align:right;padding-top:.12rem;
+}
+.pub-body{flex:1 1 auto;min-width:0}
+.pub-title{font-family:var(--serif);font-size:1.02rem;line-height:1.42;color:var(--ink)}
+.pub-authors{font-size:.87rem;color:var(--ink-soft);margin-top:.22rem}
+.pub-authors .me{font-weight:600;color:var(--ink)}
+.pub-venue{font-size:.87rem;color:var(--ink-faint);margin-top:.22rem}
+.pub-venue .journal{font-style:italic;color:var(--ink-soft)}
+.pub-links{margin-top:.4rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{
+  font-size:.74rem;padding:.16rem .5rem;border-radius:5px;
+  border:1px solid var(--rule-strong);color:var(--ink-soft);background:var(--bg-raised);
+}
+.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.year-chip{border-style:none;background:var(--bg-sunken);color:var(--ink-faint);font-variant-numeric:tabular-nums}
+
+/* ---- generic entry list ---- */
+.entries li{
+  padding:.8rem 0 .8rem 1.1rem;border-bottom:1px solid var(--rule);
+  position:relative;font-size:.94rem;line-height:1.6;
+}
+.entries li:last-child{border-bottom:0}
+.entries li::before{content:"";position:absolute;left:0;top:1.3rem;width:5px;height:5px;border-radius:50%;background:var(--rule-strong)}
+.entries .when{display:block;font-size:.78rem;color:var(--ink-faint);font-variant-numeric:tabular-nums;margin-bottom:.15rem;letter-spacing:.01em}
+.entries .talk{font-family:var(--serif);font-size:.97rem;color:var(--ink);display:block;margin-top:.3rem}
+.entries .talk::before{content:"“"}
+.entries .talk::after{content:"”"}
+.role-tag{
+  display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  background:var(--accent-soft);color:var(--accent-ink);padding:.1rem .4rem;border-radius:4px;margin-left:.4rem;vertical-align:.08em;
+}
+
+/* ---- projects ---- */
+.project{background:var(--bg-raised);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:1rem 1.15rem;margin-bottom:.9rem}
+.project-title{font-family:var(--serif);font-size:1.02rem;font-weight:600;line-height:1.4}
+.project-meta{font-size:.84rem;color:var(--ink-faint);margin-top:.35rem}
+.project-budget{font-size:.85rem;color:var(--ink-soft);margin-top:.3rem}
+
+/* ---- referee note ---- */
+.prose{font-size:.95rem;line-height:1.7;color:var(--ink-soft)}
+.prose strong{color:var(--ink);font-weight:600}
+
+/* ---- footer ---- */
+footer{
+  margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  font-size:.82rem;color:var(--ink-faint);display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;justify-content:space-between;
+}
+
+/* ---- theme toggle ---- */
+.theme-btn{
+  appearance:none;border:1px solid var(--rule-strong);background:var(--bg-raised);color:var(--ink-soft);
+  border-radius:7px;width:30px;height:30px;cursor:pointer;font-size:.9rem;line-height:1;
+  display:grid;place-items:center;
+}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:900px){
+  .sidebar{display:none}
+  .topbar{display:flex}
+  .main{padding:1.75rem 1rem 4rem;max-width:100%}
+  .hero-top{gap:1.1rem}
+  .monogram{flex-basis:62px;width:62px;height:62px;font-size:1.4rem}
+  .pub-n{flex-basis:1.5rem}
+}
+@media (max-width:520px){
+  .kv{grid-template-columns:1fr;gap:.1rem .5rem}
+  .kv dt{margin-top:.5rem}
+  .hero-top{flex-direction:column}
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+@media print{
+  :root{--bg:#fff;--bg-raised:#fff;--ink:#000;--ink-soft:#333;--ink-faint:#555;--rule:#ccc;--rule-strong:#999;--accent:#000}
+  .sidebar,.topbar,.drawer,.actions,.theme-btn{display:none!important}
+  .main{padding:0;max-width:100%}
+  section{margin-top:1.6rem;page-break-inside:avoid}
+  .pub,.degree,.entries li{page-break-inside:avoid}
+  a{color:#000}
+  .chip{border:0;padding:0;background:none;font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== mobile top bar ===== -->
+<div class="topbar">
+  <span class="topbar-name">Farouk Mselmi</span>
+  <div style="display:flex;gap:.5rem;align-items:center">
+    <button class="theme-btn" id="themeBtn2" aria-label="Toggle colour theme">◐</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false">Sections</button>
+  </div>
+</div>
+<nav class="drawer" id="drawer" aria-label="Sections">
+  <a href="#about">About</a>
+  <a href="#contact">Contact &amp; Links</a>
+  <a href="#research">Research Areas</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education &amp; Qualifications</a>
+  <a href="#publications">Publications</a>
+  <a href="#submissions">Under Review</a>
+  <a href="#committees">Scientific Committees</a>
+  <a href="#refereeing">Refereeing</a>
+  <a href="#projects">Funded Projects</a>
+  <a href="#talks">Conferences &amp; Talks</a>
+  <a href="#visit">Scientific Visit</a>
+  <a href="#admin">Administrative Service</a>
+  <a href="#skills">Skills &amp; Languages</a>
+</nav>
+
+<div class="shell">
+
+  <!-- ===== sidebar ===== -->
+  <aside class="sidebar">
+    <a class="brand" href="#top">
+      <span class="brand-name">Farouk Mselmi</span>
+      <span class="brand-role">Associate Professor<br>Euro-Mediterranean University of Fez</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#contact">Contact &amp; Links</a>
+      <a href="#research">Research Areas</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education &amp; Qualifications</a>
+      <a href="#publications">Publications</a>
+      <a href="#submissions">Under Review</a>
+      <a href="#committees">Scientific Committees</a>
+      <a href="#refereeing">Refereeing</a>
+      <a href="#projects">Funded Projects</a>
+      <a href="#talks">Conferences &amp; Talks</a>
+      <a href="#visit">Scientific Visit</a>
+      <a href="#admin">Administrative Service</a>
+      <a href="#skills">Skills &amp; Languages</a>
+    </nav>
+    <div class="side-foot">
+      <a href="https://orcid.org/0000-0003-1881-7046" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.researchgate.net/profile/Farouk_Mselmi" target="_blank" rel="noopener">ResearchGate</a>
+      <div style="margin-top:.7rem;display:flex;align-items:center;gap:.5rem">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme">◐</button>
+        <span>Theme</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== main ===== -->
+  <main class="main" id="top">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-top">
+        <div class="monogram" aria-hidden="true">FM</div>
+        <div>
+          <h1>Farouk Mselmi</h1>
+          <div class="hero-title">Associate Professor of Mathematical Statistics</div>
+          <div class="hero-affil">Euromed Polytechnic School · Euro-Mediterranean University of Fez, Morocco</div>
+        </div>
+      </div>
+
+      <p class="hero-lede">
+        My research develops probabilistic and inferential tools for structured randomness —
+        generalized linear models for subordinated Lévy and Markov-kernel families, natural
+        exponential families and their variance functions, mixture models, and stable processes —
+        with applications to finance, urban mobility and supply chain management.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="CV_MSELMI_Farouk.pdf" target="_blank" rel="noopener">Download full CV (PDF)</a>
+        <a class="btn" href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a>
+        <a class="btn" href="https://orcid.org/0000-0003-1881-7046" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://www.researchgate.net/profile/Farouk_Mselmi" target="_blank" rel="noopener">ResearchGate</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="stat-n">15</div><div class="stat-l">Journal articles</div></div>
+        <div class="stat"><div class="stat-n">1</div><div class="stat-l">Book (CRC Press)</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Chapters &amp; proceedings</div></div>
+        <div class="stat"><div class="stat-n">4</div><div class="stat-l">Under review</div></div>
+        <div class="stat"><div class="stat-n">2</div><div class="stat-l">Funded projects</div></div>
+        <div class="stat"><div class="stat-n">HDR</div><div class="stat-l">Habilitation, 2023</div></div>
+      </div>
+    </header>
+
+    <!-- ========================================================
+         ABOUT / PERSONAL INFORMATION
+         --------------------------------------------------------
+         NOTE: this section reproduces the personal details from
+         the CV (gender, date and place of birth, citizenship,
+         family situation, mobile number). To remove them from the
+         public page, delete this whole <section> block and its
+         two matching entries in the sidebar and drawer menus.
+         ======================================================== -->
+    <section id="about">
+      <div class="sec-head"><h2>About</h2></div>
+      <dl class="kv">
+        <dt>Position</dt><dd>Associate Professor, Euro-Mediterranean University of Fez, Morocco (since Sep. 2026)</dd>
+        <dt>Gender</dt><dd>Male</dd>
+        <dt>Date of birth</dt><dd>20 January 1986</dd>
+        <dt>Place of birth</dt><dd>Ain Drahem, Tunisia</dd>
+        <dt>Citizenship</dt><dd>Tunisian</dd>
+        <dt>Family</dt><dd>Married, one son, one daughter</dd>
+        <dt>Phone</dt><dd><a href="tel:+212611535245">+212 611 535 245</a></dd>
+        <dt>Languages</dt><dd>Arabic (native), English (fluent), French (fluent)</dd>
+      </dl>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sec-head"><h2>Contact &amp; Links</h2></div>
+      <div class="cards">
+        <div class="card">
+          <h4>Professional address</h4>
+          <address>
+            Building B4, Office 2.39<br>
+            Euro-Mediterranean University<br>
+            Roundabout Bensouda, Meknes Road<br>
+            Fez, Morocco
+          </address>
+        </div>
+        <div class="card">
+          <h4>Personal address</h4>
+          <address>
+            Apartment 25, Prestige 2 Residence<br>
+            17 Abou Baker Zniber street<br>
+            V.N. Champ de course<br>
+            Fez, Morocco
+          </address>
+        </div>
+      </div>
+      <dl class="kv" style="margin-top:1.1rem">
+        <dt>Affiliation</dt><dd>Euro-Mediterranean University, Morocco</dd>
+        <dt>Institutional e-mail</dt><dd><a href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a></dd>
+        <dt>Personal e-mail</dt><dd><a href="mailto:mselmi.farouk@gmail.com">mselmi.farouk@gmail.com</a></dd>
+        <dt>ORCID</dt><dd><a href="https://orcid.org/0000-0003-1881-7046" target="_blank" rel="noopener">0000-0003-1881-7046</a></dd>
+        <dt>ResearchGate</dt><dd><a href="https://www.researchgate.net/profile/Farouk_Mselmi" target="_blank" rel="noopener">profile/Farouk_Mselmi</a></dd>
+      </dl>
+    </section>
+
+    <!-- RESEARCH AREAS -->
+    <section id="research">
+      <div class="sec-head"><h2>Research Areas</h2></div>
+      <div class="tags">
+        <span class="tag">Generalized Linear Models</span>
+        <span class="tag">Mathematical Statistics</span>
+        <span class="tag">Kernel Estimation Method</span>
+        <span class="tag">Nonparametric Statistics</span>
+        <span class="tag">Mixture Models</span>
+        <span class="tag">Natural Exponential Families</span>
+        <span class="tag">Variance Functions</span>
+        <span class="tag">Stable Processes</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-head"><h2>Professional Experience</h2></div>
+      <div class="timeline">
+        <div class="tl-item now">
+          <div class="tl-role">Associate Professor<span class="badge-now">Current</span></div>
+          <div class="tl-meta">Euro-Mediterranean University, Fez, Morocco</div>
+          <div class="tl-date">Sep. 2026 — Present</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Assistant Professor</div>
+          <div class="tl-meta">Euro-Mediterranean University, Fez, Morocco</div>
+          <div class="tl-date">Jan. 2021 — Sep. 2026</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Assistant Professor</div>
+          <div class="tl-meta">King Saud University, Riyadh, Saudi Arabia</div>
+          <div class="tl-date">Sep. 2018 — Jan. 2021</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Assistant Professor</div>
+          <div class="tl-meta">Sfax University, Sfax, Tunisia</div>
+          <div class="tl-date">Feb. 2016 — Sep. 2017</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Teaching Assistant</div>
+          <div class="tl-meta">Sfax University, Sfax, Tunisia</div>
+          <div class="tl-date">Oct. 2015 — Dec. 2015</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-role">Teaching Assistant</div>
+          <div class="tl-meta">Gabes University, Gabes, Tunisia</div>
+          <div class="tl-date">Oct. 2011 — Sep. 2015</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="sec-head"><h2>Education &amp; Qualifications</h2></div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">French qualifications for <em>Maître de Conférences</em> and <em>Professeur</em></div>
+          <div class="degree-date">2024</div>
+        </div>
+        <div class="degree-inst">Conseil National des Universités (CNU), section 26 — France</div>
+        <div class="degree-thesis">Qualification numbers — PR: 24126372697 · MCF: 22226372697</div>
+      </div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">Habilitation à Diriger des Recherches (HDR)</div>
+          <div class="degree-date">3 April 2023</div>
+        </div>
+        <div class="degree-inst">Burgundy-Franche-Comté University (now Marie and Louis Pasteur University), France</div>
+        <div class="degree-thesis"><em>Markov Kernels Models for Natural Exponential Families</em></div>
+        <details class="jury">
+          <summary>Jury members</summary>
+          <ul>
+            <li><b>Pr. Célestin Kokonendji</b> — President, Marie and Louis Pasteur University, France</li>
+            <li><b>Pr. Jean-François Dupuy</b> — Reviewer, Rennes University, France</li>
+            <li><b>Pr. Abderrazed Karoui</b> — Reviewer, Carthage University, Tunisia</li>
+            <li><b>Pr. Yousri Slaoui</b> — Reviewer, Poitiers University, France</li>
+            <li><b>Pr. Mahdi Louati</b> — Examiner, Sfax University, Tunisia</li>
+            <li><b>Pr. Angelo Koudou</b> — Examiner, Lorraine University, France</li>
+          </ul>
+        </details>
+        <div class="pub-links" style="margin-top:.55rem">
+          <a class="chip" href="https://theses.hal.science/tel-04069084/" target="_blank" rel="noopener">HAL · tel-04069084</a>
+        </div>
+      </div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">Ph.D. in Mathematics — Probability and Statistics</div>
+          <div class="degree-date">Sep. 2012 — 18 Dec. 2015</div>
+        </div>
+        <div class="degree-inst">Sfax University, Tunisia</div>
+        <div class="degree-thesis"><em>Multivariate normal α-stable distributions</em></div>
+        <div class="degree-thesis" style="font-size:.88rem;color:var(--ink-soft)">Advisor: Afif Masmoudi · Co-advisor: Mahdi Louati</div>
+        <details class="jury">
+          <summary>Jury members</summary>
+          <ul>
+            <li><b>Pr. Mokhless Hammami</b> — President, Sfax University, Tunisia</li>
+            <li><b>Pr. Sonia Fourati</b> — Reviewer, Rouen Normandy University, France</li>
+            <li><b>Pr. Mohamed Ali Hammami</b> — Reviewer, Sfax University, Tunisia</li>
+            <li><b>Pr. Bassem Ben Hamed</b> — Examiner, Sfax University, Tunisia</li>
+          </ul>
+        </details>
+        <div class="pub-links" style="margin-top:.55rem">
+          <a class="chip" href="https://www.researchgate.net/publication/324775442_Multivariate_Normal_a-Stable_Distributions" target="_blank" rel="noopener">ResearchGate</a>
+        </div>
+      </div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">Master's degree in Mathematics and Applications</div>
+          <div class="degree-date">Sep. 2009 — 14 Jul. 2011</div>
+        </div>
+        <div class="degree-inst">Tunis El Manar University, Tunisia</div>
+        <div class="degree-thesis"><em>Large deviations for local time and intersection local time of fractional Brownian motion and Riemann–Liouville process</em></div>
+        <div class="degree-thesis" style="font-size:.88rem;color:var(--ink-soft)">Advisor: Ezeddine Haouala</div>
+      </div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">Bachelor's degree in Mathematics</div>
+          <div class="degree-date">Sep. 2004 — Jun. 2008</div>
+        </div>
+        <div class="degree-inst">Carthage University, Tunisia</div>
+      </div>
+
+      <div class="degree">
+        <div class="degree-head">
+          <div class="degree-name">High school diploma in Mathematics</div>
+          <div class="degree-date">Jun. 2004</div>
+        </div>
+        <div class="degree-inst">Ain Drahem High School, Tunisia</div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="sec-head">
+        <h2>Publications</h2>
+        <span class="count">15 journal articles · 1 book · 3 chapters &amp; proceedings</span>
+      </div>
+
+      <h3 class="sub">Peer-reviewed journal articles</h3>
+      <ol class="pubs">
+        <li class="pub">
+          <div class="pub-n">15</div>
+          <div class="pub-body">
+            <div class="pub-title">Regression models for composite responses with heterogeneous distributional components</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Sankhya A</span> (Springer), 2026</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2026</span>
+              <a class="chip" href="https://doi.org/10.1007/s13171-026-00453-w" target="_blank" rel="noopener">DOI</a>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s13171-026-00453-w" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">14</div>
+          <div class="pub-body">
+            <div class="pub-title">Asymptotic Thorin distributions of multivariate generalized splines via Markov–Krein Transform</div>
+            <div class="pub-authors">F. Fourati, <span class="me">F. Mselmi</span>, N. Limnios</div>
+            <div class="pub-venue"><span class="journal">Journal of Statistical Theory and Practice</span> (Springer), Vol. 30, 62, 1–23, 2026</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2026</span>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s42519-026-00571-6" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">13</div>
+          <div class="pub-body">
+            <div class="pub-title">On the duality for mixture models</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Statistics and Probability Letters</span> (Elsevier), Vol. 230, 110604, 1–5, 2026</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2026</span>
+              <a class="chip" href="https://www.sciencedirect.com/science/article/pii/S0167715225002494" target="_blank" rel="noopener">ScienceDirect</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">12</div>
+          <div class="pub-body">
+            <div class="pub-title">Multivariate generalized linear models for Markov kernels with (un)known link and variance functions</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span>, C. C. Kokonendji</div>
+            <div class="pub-venue"><span class="journal">TEST</span> (Springer), Vol. 34, No. 4, 896–926, 2025</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2025</span>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s11749-025-00982-w" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">11</div>
+          <div class="pub-body">
+            <div class="pub-title">Urban Mobility Modeling: Application to Seoul Bike Sharing Data</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span>, M. Fri, N. Rouky</div>
+            <div class="pub-venue"><span class="journal">Engineering Proceedings</span> (MDPI), Vol. 112, No. 51, 1–9, 2025</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2025</span>
+              <a class="chip" href="https://www.mdpi.com/2673-4591/112/1/51" target="_blank" rel="noopener">MDPI</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">10</div>
+          <div class="pub-body">
+            <div class="pub-title">Modeling exchange rate volatility: application of GARCH models with a Normal Tempered Stable distribution</div>
+            <div class="pub-authors">S. Charfi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Quantitative Finance and Economics</span> (AIMS Press), Vol. 6, No. 2, 206–222, 2022</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2022</span>
+              <a class="chip" href="https://www.aimspress.com/article/doi/10.3934/QFE.2022009" target="_blank" rel="noopener">AIMS Press</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">9</div>
+          <div class="pub-body">
+            <div class="pub-title">Generalized linear model for subordinated Lévy processes</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Scandinavian Journal of Statistics</span> (Wiley), Vol. 49, No. 2, 772–801, 2022</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2022</span>
+              <a class="chip" href="https://onlinelibrary.wiley.com/doi/10.1111/sjos.12538" target="_blank" rel="noopener">Wiley</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">8</div>
+          <div class="pub-body">
+            <div class="pub-title">Approximation of the quasi-deviance function for the time-changed Lévy processes by the first-exit time of the inverse Gaussian subordinator</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Stat</span> (Wiley), Vol. 10, No. 1, 1–9, 2021</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2021</span>
+              <a class="chip" href="https://onlinelibrary.wiley.com/doi/10.1002/sta4.362" target="_blank" rel="noopener">Wiley</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">7</div>
+          <div class="pub-body">
+            <div class="pub-title">The normal tempered stable regression model</div>
+            <div class="pub-authors">M. Louati, A. Masmoudi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Communications in Statistics: Theory &amp; Methods</span> (Taylor &amp; Francis), Vol. 49, No. 2, 500–512, 2020</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2020</span>
+              <a class="chip" href="https://www.tandfonline.com/doi/full/10.1080/03610926.2018.1554121" target="_blank" rel="noopener">Taylor &amp; Francis</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">6</div>
+          <div class="pub-body">
+            <div class="pub-title">Lévy processes time-changed by the first-exit time of the inverse Gaussian subordinator</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Filomat</span> (University of Niš), Vol. 32, No. 7, 2545–2552, 2018</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2018</span>
+              <a class="chip" href="http://www.pmf.ni.ac.rs/filomat-content/2018/32-7/32-7-16-6205.pdf" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">5</div>
+          <div class="pub-body">
+            <div class="pub-title">Generalized variance functions for infinitely divisible mixture distributions</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span>, C. C. Kokonendji, M. Louati, A. Masmoudi</div>
+            <div class="pub-venue"><span class="journal">Mediterranean Journal of Mathematics</span> (Springer), Vol. 14, No. 4:165, 1–19, 2018</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2018</span>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s00009-018-1214-9" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">4</div>
+          <div class="pub-body">
+            <div class="pub-title">Characterization of the inverse stable subordinator</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Statistics and Probability Letters</span> (Elsevier), Vol. 140, 37–43, 2018</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2018</span>
+              <a class="chip" href="https://www.sciencedirect.com/science/article/pii/S0167715218301470" target="_blank" rel="noopener">ScienceDirect</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">3</div>
+          <div class="pub-body">
+            <div class="pub-title">The stable processes on symmetric matrices</div>
+            <div class="pub-authors"><span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Arab Journal of Mathematical Sciences</span> (Elsevier), Vol. 24, No. 1, 63–69, 2018</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2018</span>
+              <a class="chip" href="https://www.sciencedirect.com/science/article/pii/S1319516617300841" target="_blank" rel="noopener">ScienceDirect</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">2</div>
+          <div class="pub-body">
+            <div class="pub-title">Characterizations of multivariate stable processes</div>
+            <div class="pub-authors">M. Louati, A. Masmoudi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Lithuanian Mathematical Journal</span> (Springer), Vol. 57, No. 1, 59–68, 2017</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2017</span>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s10986-017-9343-6" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">1</div>
+          <div class="pub-body">
+            <div class="pub-title">Multivariate normal α-stable exponential families</div>
+            <div class="pub-authors">M. Louati, A. Masmoudi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Mediterranean Journal of Mathematics</span> (Springer), Vol. 13, No. 3, 1307–1323, 2015</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2015</span>
+              <a class="chip" href="https://link.springer.com/article/10.1007/s00009-015-0562-y" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="sub">Books</h3>
+      <div class="project">
+        <div class="project-title">Compound Tweedie Dispersion Models: Theory, Methods, and Applications</div>
+        <div class="project-meta">C. C. Kokonendji, F. Mselmi — Chapman &amp; Hall / CRC Press (Taylor &amp; Francis Group), London, pp. 1–302</div>
+        <div class="project-budget">Accepted for publication · 2026</div>
+      </div>
+
+      <h3 class="sub">Peer-reviewed chapters &amp; conference papers</h3>
+      <ol class="pubs">
+        <li class="pub">
+          <div class="pub-n">3</div>
+          <div class="pub-body">
+            <div class="pub-title">Stock Market Volatility Forecasting: A Supervised Learning Approach with Normal Tempered λ-Stable Distribution</div>
+            <div class="pub-authors">S. Charfi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue">3rd International Conference on Embedded Systems and Artificial Intelligence (ESAI), 1–5 — IEEE Xplore, 2024</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2024</span>
+              <a class="chip" href="https://ieeexplore.ieee.org/document/10913516" target="_blank" rel="noopener">IEEE Xplore</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">2</div>
+          <div class="pub-body">
+            <div class="pub-title">Comparative performance analysis for Poisson and Poisson-Inverse Gaussian generalized linear models on supply chain management</div>
+            <div class="pub-authors">N. Rouky, M. Fri, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Lecture Notes in Networks and Systems</span>, 1104 LNNS, 91–98 — Springer, 2024</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2024</span>
+              <a class="chip" href="https://link.springer.com/book/10.1007/978-3-031-68628-3" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-n">1</div>
+          <div class="pub-body">
+            <div class="pub-title">Gamma stopping and drifted stable processes</div>
+            <div class="pub-authors">M. Louati, A. Masmoudi, <span class="me">F. Mselmi</span></div>
+            <div class="pub-venue"><span class="journal">Springer Proceedings in Mathematics and Statistics</span>, 131, 223–232 — Springer, 2015</div>
+            <div class="pub-links">
+              <span class="chip year-chip">2015</span>
+              <a class="chip" href="https://link.springer.com/chapter/10.1007/978-3-319-18041-0_13" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SUBMISSIONS -->
+    <section id="submissions">
+      <div class="sec-head"><h2>Under Review</h2><span class="count">4 submitted articles</span></div>
+      <ul class="entries">
+        <li>
+          <span class="when">Submitted 2026</span>
+          <strong>Generalized estimating equations for longitudinal data with inverse stable margins</strong><br>
+          <span style="font-size:.87rem;color:var(--ink-soft)">F. Mselmi, S. Ferreira</span>
+        </li>
+        <li>
+          <span class="when">Submitted 2026</span>
+          <strong>Distribution-Aware Hybrid Neural Learning for Flexible Count Prediction: A Poisson–Tempered Stable Framework</strong><br>
+          <span style="font-size:.87rem;color:var(--ink-soft)">F. Mselmi</span>
+        </li>
+        <li>
+          <span class="when">Submitted 2026</span>
+          <strong>Computational Inference for Poisson–Tweedie Regression with Data-Driven Power Selection</strong><br>
+          <span style="font-size:.87rem;color:var(--ink-soft)">F. Mselmi, C. C. Kokonendji</span>
+        </li>
+        <li>
+          <span class="when">Submitted 2026</span>
+          <strong>Lévy structure of dual measures for real mixture models</strong><br>
+          <span style="font-size:.87rem;color:var(--ink-soft)">F. Mselmi</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- COMMITTEES -->
+    <section id="committees">
+      <div class="sec-head"><h2>Scientific Committees</h2></div>
+      <ul class="entries">
+        <li>
+          <span class="when">4–5 December 2026 · Settat, Morocco</span>
+          Member of the Scientific Committee — 2nd International Conference on Artificial Intelligence and Cognitive Science for Emerging Technologies (AICSET 2026)
+          <div class="pub-links"><a class="chip" href="https://aicset.org/committees" target="_blank" rel="noopener">aicset.org/committees</a></div>
+        </li>
+        <li>
+          <span class="when">14–16 July 2025 · Marrakesh, Morocco</span>
+          Member of the Scientific Committee — International Conference on Artificial Intelligence and Cognitive Science for Emerging Technologies (AICSET 2025)
+          <div class="pub-links"><a class="chip" href="https://aicset.sciencesconf.org/resource/page/id/5" target="_blank" rel="noopener">Conference page</a></div>
+        </li>
+        <li>
+          <span class="when">2–6 December 2024 · Yaoundé, Cameroon</span>
+          Member of the Scientific Committee — International Conference on the Promotion of Applied Statistics for decision-making and development in Africa (CIPSA'2024)
+        </li>
+        <li>
+          <span class="when">2–4 May 2024 · Marrakesh, Morocco</span>
+          Chair of the thematic session “Modeling, simulation and optimization” <span class="role-tag">Chair</span><br>
+          <span style="font-size:.88rem;color:var(--ink-soft)">7th International Conference on Logistics Operations Management (GOL'24)</span>
+        </li>
+        <li>
+          <span class="when">2–4 May 2024 · Marrakesh, Morocco</span>
+          Member of the editorial committee, special session “Artificial Intelligence Techniques and Statistical modeling for Mobility and urban logistics planning” — 7th International Conference on Logistics Operations Management
+          <div class="pub-links"><a class="chip" href="https://gol24.sciencesconf.org/resource/page/id/31" target="_blank" rel="noopener">Session page</a></div>
+        </li>
+        <li>
+          <span class="when">14–16 October 2016 · Sfax, Tunisia</span>
+          Member of the organizing committee — 3rd International Conference on Bayesian Networks and Applications, Sfax University
+        </li>
+      </ul>
+    </section>
+
+    <!-- REFEREEING -->
+    <section id="refereeing">
+      <div class="sec-head"><h2>Refereeing</h2></div>
+      <p class="prose">Referee for the following journals:</p>
+      <div class="tags" style="margin-top:.75rem">
+        <span class="tag tag-plain">Journal of Statistical Theory and Practice <em>(Springer)</em></span>
+        <span class="tag tag-plain">Metrika <em>(Springer)</em></span>
+        <span class="tag tag-plain">Communications in Statistics: Simulation and Computation <em>(Taylor &amp; Francis)</em></span>
+        <span class="tag tag-plain">Communications in Statistics: Theory and Methods <em>(Taylor &amp; Francis)</em></span>
+        <span class="tag tag-plain">Annals of the Institute of Statistical Mathematics <em>(Springer)</em></span>
+        <span class="tag tag-plain">Statistical Papers <em>(Springer)</em></span>
+        <span class="tag tag-plain">The R Journal</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-head"><h2>Funded Research Projects</h2></div>
+      <div class="project">
+        <div class="project-title">Urban logistics: systemic approach, modelling and practical solutions — the case of Mediterranean conurbations</div>
+        <div class="project-meta">2022 — 2025</div>
+        <div class="project-budget">Budget: 511.032 kDh — Euromed University</div>
+      </div>
+      <div class="project">
+        <div class="project-title">Urban mobility e-marketplace for optimized travel (Mobility Online Market for Optimized Trips)</div>
+        <div class="project-meta">2021 — 2024</div>
+        <div class="project-budget">Budget: 1 636 kDh — Ministry of Higher Education and CNRST with ADD</div>
+      </div>
+    </section>
+
+    <!-- TALKS -->
+    <section id="talks">
+      <div class="sec-head"><h2>Conferences &amp; Workshops</h2><span class="count">14 entries</span></div>
+      <ul class="entries">
+        <li>
+          <span class="when">15–16 October 2026 · Portugal</span>
+          <strong>Invited speaker</strong> <span class="role-tag">Invited</span> — 6th International Conference on Statistics, Mathematics and Computation (WSMC16), Universidade Aberta &amp; Universidade da Beira Interior
+          <span class="talk">Regression models for composite responses with heterogeneous distributional components</span>
+        </li>
+        <li>
+          <span class="when">23–25 April 2026 · Marrakech, Morocco</span>
+          8th International Conference on Research in Applied Mathematics and Computer Science (ICRAMCS 2026)
+        </li>
+        <li>
+          <span class="when">14–16 July 2025 · Marrakech, Morocco</span>
+          International Conference on Artificial Intelligence and Cognitive Science for Emerging Technologies (AICSET 2025)
+          <span class="talk">Urban Mobility Modeling: Application to Seoul Bike Sharing Data</span>
+        </li>
+        <li>
+          <span class="when">19–20 December 2024 · Fez, Morocco</span>
+          3rd International Conference on Embedded Systems and Artificial Intelligence (ESAI'24)
+          <span class="talk">Stock Market Volatility Forecasting: A Supervised Learning Approach with Normal Tempered Stable Distribution</span>
+        </li>
+        <li>
+          <span class="when">2–6 December 2024 · Yaoundé, Cameroon</span>
+          International Conference on the Promotion of Applied Statistics for decision-making and development in Africa (CIPSA'2024)
+          <span class="talk">Modeling the ratio of Tanimoto coefficients by the normal tempered stable model</span>
+        </li>
+        <li>
+          <span class="when">2–4 May 2024 · Marrakech, Morocco</span>
+          7th International Conference on Logistics Operations Management (GOL'24)
+          <span class="talk">Comparative performance analysis for Poisson and Poisson-Inverse Gaussian generalized linear models on supply chain management</span>
+        </li>
+        <li>
+          <span class="when">6–8 July 2022 · Besançon, France</span>
+          3rd LmB Conference on Multivariate Statistical Models: Count and Semi-Continuous
+          <span class="talk">Generalized linear model for subordinated Lévy processes</span>
+        </li>
+        <li>
+          <span class="when">26 February – 1 March 2017 · Mahdia, Tunisia</span>
+          22nd International Conference of the Tunisian Mathematical Society (TMS)
+          <span class="talk">Characterizations of the normal variance-mean mixture by a stable mixing</span>
+        </li>
+        <li>
+          <span class="when">9–11 February 2017 · Sfax, Tunisia</span>
+          Workshop on Modeling, Statistical Signal and Remote Sensing
+        </li>
+        <li>
+          <span class="when">14–16 October 2016 · Sousse, Tunisia</span>
+          3rd International Conference on Bayesian Networks and Applications (ICBNA)
+        </li>
+        <li>
+          <span class="when">21–24 December 2015 · Hammamet, Tunisia</span>
+          International Conference on Advances of Applied Mathematics (ICAAM)
+          <span class="talk">Multivariate normal α-stable distributions</span>
+        </li>
+        <li>
+          <span class="when">22–25 December 2014 · Hammamet, Tunisia</span>
+          International Conference on Advances of Applied Mathematics (ICAAM)
+          <span class="talk">Multivariate normal α-stable exponential families</span>
+        </li>
+        <li>
+          <span class="when">16–19 December 2013 · Hammamet, Tunisia</span>
+          International Conference on Advances of Applied Mathematics (ICAAM)
+          <span class="talk">Gamma stopping time and drifted stable processes</span>
+        </li>
+        <li>
+          <span class="when">28 October – 9 November 2013 · Nabeul-Hammamet, Tunisia</span>
+          CIMPA School
+        </li>
+      </ul>
+    </section>
+
+    <!-- VISIT -->
+    <section id="visit">
+      <div class="sec-head"><h2>Scientific Visit</h2></div>
+      <div class="card">
+        <h4>15 June — 1 July 2015 · INSA Rouen, France</h4>
+        <p class="prose" style="margin:0">
+          Scientific visit at the invitation of <strong>Ms. Sonia Fourati</strong>. An oral presentation entitled
+          <em>“Multivariate normal α-stable distributions”</em> was given on 25 June 2015.
+        </p>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin">
+      <div class="sec-head"><h2>Administrative Service</h2></div>
+      <ul class="entries">
+        <li><span class="when">Since 2022</span> Member of the Euromed Polytechnic School Council, Euro-Mediterranean University, Fez</li>
+        <li><span class="when">2024</span> Participation in the accreditation of the Industrial Engineering programme, Euro-Mediterranean University, Fez</li>
+        <li><span class="when">2024</span> Participation in the accreditation of the Master's in Supply Chain Management programme, Euro-Mediterranean University, Fez</li>
+        <li><span class="when">2022 — 2024</span> Coordinator of several teaching modules for the preparatory and engineering cycles</li>
+        <li><span class="when">2022 — 2023</span> Participation in the doctoral selection process, Euro-Mediterranean University, Fez</li>
+        <li><span class="when">2022 — 2023</span> Participation in the selection of students for the Master's in Transport and Sustainable Mobility, Euro-Mediterranean University, Fez</li>
+        <li><span class="when">2021</span> Member of the coordination committee for the preparatory cycle for engineering studies, Euro-Mediterranean University, Fez</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-head"><h2>Skills &amp; Languages</h2></div>
+      <h3 class="sub">Computing</h3>
+      <div class="tags">
+        <span class="tag tag-plain">MATLAB</span>
+        <span class="tag tag-plain">Octave</span>
+        <span class="tag tag-plain">Python</span>
+        <span class="tag tag-plain">R</span>
+        <span class="tag tag-plain">C</span>
+        <span class="tag tag-plain">C++</span>
+        <span class="tag tag-plain">LaTeX</span>
+      </div>
+      <h3 class="sub">Languages</h3>
+      <dl class="kv">
+        <dt>Arabic</dt><dd>Native</dd>
+        <dt>English</dt><dd>Fluent</dd>
+        <dt>French</dt><dd>Fluent</dd>
+      </dl>
+    </section>
+
+    <footer>
+      <span>© <span id="yr">2026</span> Farouk Mselmi · Euro-Mediterranean University of Fez</span>
+      <span><a href="CV_MSELMI_Farouk.pdf" target="_blank" rel="noopener">Full CV (PDF)</a> · Last updated October 2026</span>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- current year ---- */
+  var yr = document.getElementById("yr");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ---- mobile drawer ---- */
+  var menuBtn = document.getElementById("menuBtn");
+  var drawer  = document.getElementById("drawer");
+  if (menuBtn && drawer) {
+    menuBtn.addEventListener("click", function(){
+      var open = drawer.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+    drawer.addEventListener("click", function(e){
+      if (e.target.tagName === "A") {
+        drawer.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* ---- theme toggle (light / dark / system) ---- */
+  var order = ["system","light","dark"];
+  var stored = null;
+  try { stored = localStorage.getItem("fm-theme"); } catch(e){}
+  var mode = order.indexOf(stored) > -1 ? stored : "system";
+
+  function apply(m){
+    if (m === "system") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", m);
+    var label = m === "system" ? "◐" : (m === "light" ? "☀" : "☾");
+    ["themeBtn","themeBtn2"].forEach(function(id){
+      var b = document.getElementById(id);
+      if (b) { b.textContent = label; b.title = "Theme: " + m; }
+    });
+  }
+  apply(mode);
+
+  function cycle(){
+    mode = order[(order.indexOf(mode) + 1) % order.length];
+    apply(mode);
+    try { localStorage.setItem("fm-theme", mode); } catch(e){}
+  }
+  ["themeBtn","themeBtn2"].forEach(function(id){
+    var b = document.getElementById(id);
+    if (b) b.addEventListener("click", cycle);
+  });
+
+  /* ---- active section highlighting ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var sections = links
+        .map(function(a){ return document.querySelector(a.getAttribute("href")); })
+        .filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    var visible = new Map();
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        visible.set(en.target.id, en.isIntersecting ? en.intersectionRatio : 0);
+      });
+      var bestId = null, best = 0;
+      visible.forEach(function(ratio, id){
+        if (ratio > best) { best = ratio; bestId = id; }
+      });
+      if (!bestId) return;
+      links.forEach(function(a){
+        a.classList.toggle("active", a.getAttribute("href") === "#" + bestId);
+      });
+    }, { rootMargin: "-10% 0px -60% 0px", threshold: [0, .1, .25, .5, 1] });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
