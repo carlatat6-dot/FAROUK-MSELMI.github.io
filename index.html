@@ -9,6 +9,7 @@
 <meta property="og:title" content="Farouk Mselmi — Associate Professor of Mathematical Statistics">
 <meta property="og:description" content="Generalized linear models, natural exponential families, mixture models and stable processes. Euro-Mediterranean University of Fez, Morocco.">
 <meta property="og:type" content="profile">
+<meta property="og:image" content="photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -147,12 +148,16 @@ ul{margin:0;padding:0;list-style:none}
    ============================================================ */
 .hero{margin-bottom:2.5rem}
 .hero-top{display:flex;gap:1.5rem;align-items:flex-start}
+/* The portrait. Swap photo.jpg in the repo to change it; the file is a
+   square image, displayed as a circle. Keep it square or the crop will
+   favour the centre and cut the top of the head. */
 .monogram{
-  flex:0 0 84px;width:84px;height:84px;border-radius:50%;
-  background:var(--accent);color:#fff;
-  display:grid;place-items:center;
-  font-family:var(--serif);font-size:1.9rem;font-weight:600;letter-spacing:.02em;
+  flex:0 0 108px;width:108px;height:108px;border-radius:50%;
+  object-fit:cover;display:block;
+  background:var(--bg-sunken);
   box-shadow:var(--shadow);
+  border:3px solid var(--bg-raised);
+  outline:1px solid var(--rule);outline-offset:-3px;
 }
 h1{font-size:clamp(1.85rem,4.6vw,2.6rem);font-weight:700;letter-spacing:-.02em}
 .hero-title{font-family:var(--serif);font-size:1.07rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.45}
@@ -206,6 +211,12 @@ h3.sub{
 }
 h3.sub:first-of-type{margin-top:0}
 
+/* ---- running prose ---- */
+.prose{font-size:.985rem;line-height:1.72;color:var(--ink-soft);max-width:66ch}
+.prose + .prose{margin-top:.95rem}
+.prose strong{color:var(--ink);font-weight:600}
+.prose em{font-family:var(--serif);font-size:1.02em}
+
 /* ---- key/value grid ---- */
 .kv{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1.1rem;font-size:.94rem}
 .kv dt{color:var(--ink-faint);font-size:.86rem;white-space:nowrap}
@@ -227,6 +238,40 @@ h3.sub:first-of-type{margin-top:0}
   background:var(--accent-soft);color:var(--accent-ink);border:1px solid transparent;
 }
 .tag-plain{background:var(--bg-sunken);color:var(--ink-soft);border-color:var(--rule)}
+
+/* ---- courses & resources ---- */
+.course{padding:1.15rem 0;border-bottom:1px solid var(--rule)}
+.course:last-child{border-bottom:0}
+.course-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.35rem 1rem;align-items:baseline}
+.course-title{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--ink)}
+.course-code{
+  font-size:.72rem;font-family:var(--sans);letter-spacing:.04em;color:var(--ink-faint);
+  background:var(--bg-sunken);border:1px solid var(--rule);border-radius:5px;
+  padding:.13rem .45rem;white-space:nowrap;
+}
+.course-meta{font-size:.855rem;color:var(--ink-faint);margin-top:.2rem}
+.course-desc{font-size:.925rem;line-height:1.62;color:var(--ink-soft);margin-top:.55rem;max-width:64ch}
+.course-files{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.45rem}
+.res{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.835rem;padding:.33rem .62rem .33rem .4rem;border-radius:7px;
+  border:1px solid var(--rule-strong);background:var(--bg-raised);color:var(--ink-soft);
+  transition:border-color .15s, color .15s, transform .15s;
+}
+.res:hover{text-decoration:none;border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.res-t{
+  font-family:var(--sans);font-size:.61rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  padding:.15rem .36rem;border-radius:4px;
+  background:var(--bg-sunken);color:var(--ink-faint);border:1px solid var(--rule);
+}
+.res:hover .res-t{border-color:currentColor;color:var(--accent)}
+.res-pdf .res-t{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.teach-note{
+  margin-top:1.7rem;font-size:.86rem;line-height:1.62;color:var(--ink-faint);
+  background:var(--bg-sunken);border:1px solid var(--rule);border-radius:9px;
+  padding:.85rem 1rem;
+}
+.teach-note b{color:var(--ink-soft);font-weight:600}
 
 /* ---- timeline ---- */
 .timeline{position:relative;padding-left:1.35rem}
@@ -340,7 +385,7 @@ footer{
   .topbar{display:flex}
   .main{padding:1.75rem 1rem 4rem;max-width:100%}
   .hero-top{gap:1.1rem}
-  .monogram{flex-basis:62px;width:62px;height:62px;font-size:1.4rem}
+  .monogram{flex-basis:76px;width:76px;height:76px;border-width:2px}
   .pub-n{flex-basis:1.5rem}
 }
 @media (max-width:520px){
@@ -357,7 +402,10 @@ footer{
   .sidebar,.topbar,.drawer,.actions,.theme-btn{display:none!important}
   .main{padding:0;max-width:100%}
   section{margin-top:1.6rem;page-break-inside:avoid}
-  .pub,.degree,.entries li{page-break-inside:avoid}
+  .pub,.degree,.entries li,.course{page-break-inside:avoid}
+  .res{border:0;padding:0;background:none;font-size:.78rem}
+  .res-t{border:0;background:none;padding:0;margin-right:.15rem}
+  .teach-note{border:1px solid #ccc;background:none}
   a{color:#000}
   .chip{border:0;padding:0;background:none;font-size:.7rem}
 }
@@ -377,6 +425,7 @@ footer{
   <a href="#about">About</a>
   <a href="#contact">Contact &amp; Links</a>
   <a href="#research">Research Areas</a>
+  <a href="#teaching">Courses &amp; Resources</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education &amp; Qualifications</a>
   <a href="#publications">Publications</a>
@@ -402,6 +451,7 @@ footer{
       <a href="#about">About</a>
       <a href="#contact">Contact &amp; Links</a>
       <a href="#research">Research Areas</a>
+      <a href="#teaching">Courses &amp; Resources</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education &amp; Qualifications</a>
       <a href="#publications">Publications</a>
@@ -430,7 +480,8 @@ footer{
     <!-- HERO -->
     <header class="hero">
       <div class="hero-top">
-        <div class="monogram" aria-hidden="true">FM</div>
+        <img class="monogram" src="photo.jpg" width="512" height="512"
+             alt="Portrait of Farouk Mselmi" decoding="async">
         <div>
           <h1>Farouk Mselmi</h1>
           <div class="hero-title">Associate Professor of Mathematical Statistics</div>
@@ -463,16 +514,55 @@ footer{
     </header>
 
     <!-- ========================================================
-         ABOUT / PERSONAL INFORMATION
+         ABOUT
          --------------------------------------------------------
-         NOTE: this section reproduces the personal details from
-         the CV (gender, date and place of birth, citizenship,
-         family situation, mobile number). To remove them from the
-         public page, delete this whole <section> block and its
-         two matching entries in the sidebar and drawer menus.
+         Two parts: a short prose introduction written for
+         visitors, then the personal details taken from the CV
+         (gender, date and place of birth, citizenship, family
+         situation, mobile number).
+
+         To take the personal details off the public page, delete
+         only the <h3 class="sub">Personal details</h3> heading and
+         the <dl class="kv"> list that follows it — the prose
+         introduction above them stays. Deleting the whole
+         <section> would remove the introduction too, and would
+         also need the two "About" entries in the sidebar and
+         drawer menus removed.
          ======================================================== -->
     <section id="about">
       <div class="sec-head"><h2>About</h2></div>
+
+      <p class="prose">
+        I am an Associate Professor of Mathematical Statistics at the Euromed Polytechnic
+        School of the Euro-Mediterranean University of Fez, Morocco. I joined Euromed in 2021,
+        after posts at King Saud University in Riyadh and at the universities of Sfax and
+        Gabès in Tunisia. I hold a <em>Habilitation à Diriger des Recherches</em> from
+        Burgundy-Franche-Comté University (2023) and the French CNU qualifications for
+        <em>Maître de Conférences</em> and <em>Professeur</em>.
+      </p>
+
+      <p class="prose">
+        My work sits where probability theory meets statistical inference. I am interested in
+        randomness that carries structure — randomness built from a subordinator, a Markov
+        kernel, or a mixture — and in how such models can be estimated from data: natural
+        exponential families and their variance functions, generalized linear models for
+        subordinated Lévy and Markov-kernel families, nonparametric and kernel estimation,
+        and stable processes. Much of it is pulled forward by concrete problems, and in recent
+        years those have come from finance, urban mobility and supply chain management,
+        including two funded projects on logistics and mobility in Mediterranean cities.
+      </p>
+
+      <p class="prose">
+        I teach mathematics and statistics in the preparatory and engineering cycles, coordinate
+        several teaching modules, and supervise Master's theses and final-year engineering
+        projects. Lecture notes, problem sets and reading lists are gathered under
+        <a href="#teaching">Courses &amp; Resources</a> — students and colleagues are welcome
+        to use them freely. If you would like to discuss a research question, a thesis topic or
+        a possible collaboration, <a href="mailto:f.mselmi@ueuromed.org">e-mail</a> is the
+        quickest way to reach me.
+      </p>
+
+      <h3 class="sub">Personal details</h3>
       <dl class="kv">
         <dt>Position</dt><dd>Associate Professor, Euro-Mediterranean University of Fez, Morocco (since Sep. 2026)</dd>
         <dt>Gender</dt><dd>Male</dd>
@@ -530,6 +620,56 @@ footer{
         <span class="tag">Variance Functions</span>
         <span class="tag">Stable Processes</span>
       </div>
+    </section>
+
+    <!-- ========================================================
+         COURSES & RESOURCES
+         --------------------------------------------------------
+         HOW TO ADD A COURSE
+         Copy one <article class="course"> block below, change the
+         fields, and drop the files into the matching folder in
+         courses/ . Newest or current courses go at the top.
+
+         <article class="course">
+           <div class="course-head">
+             <h4 class="course-title">Course name</h4>
+             <span class="course-code">Cycle · Semester</span>
+           </div>
+           <div class="course-meta">Programme · Academic year</div>
+           <p class="course-desc">One or two sentences on what the
+              course covers and who it is for.</p>
+           <div class="course-files">
+             <a class="res res-pdf" href="courses/folder/notes.pdf"><span class="res-t">PDF</span> Lecture notes</a>
+             <a class="res res-pdf" href="courses/folder/sheet-1.pdf"><span class="res-t">PDF</span> Problem sheet 1</a>
+             <a class="res" href="courses/folder/slides.pdf"><span class="res-t">Slides</span> Chapter 1</a>
+             <a class="res" href="courses/folder/data.csv"><span class="res-t">Data</span> Example dataset</a>
+             <a class="res" href="https://example.org" target="_blank" rel="noopener"><span class="res-t">Link</span> Reading list</a>
+           </div>
+         </article>
+
+         The res-t label is free text — PDF, Slides, Data, Code,
+         Link, Exam, Solutions. Add class="res-pdf" to tint it in
+         the accent colour; leave it off for a neutral label.
+         Use target="_blank" rel="noopener" only for links that
+         leave the site.
+         ======================================================== -->
+    <section id="teaching">
+      <div class="sec-head"><h2>Courses &amp; Resources</h2></div>
+
+      <p class="prose">
+        Teaching material for the courses I give at the Euromed Polytechnic School — lecture
+        notes, problem sheets, slides and the occasional dataset. Everything on this page is
+        free to download, and students are welcome to pass it on.
+      </p>
+
+      <!-- course cards go here -->
+
+      <p class="teach-note">
+        <b>A note on use.</b> These notes are shared for study. You are free to download, print
+        and circulate them; if you reuse any part in your own teaching or writing, please credit
+        the source. Errors are mine — if you find one, I would be glad to hear about it at
+        <a href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a>.
+      </p>
     </section>
 
     <!-- EXPERIENCE -->
