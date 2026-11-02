@@ -9,7 +9,6 @@
 <meta property="og:title" content="Farouk Mselmi — Associate Professor of Mathematical Statistics">
 <meta property="og:description" content="Generalized linear models, natural exponential families, mixture models and stable processes. Euro-Mediterranean University of Fez, Morocco.">
 <meta property="og:type" content="profile">
-<meta property="og:image" content="photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -148,16 +147,12 @@ ul{margin:0;padding:0;list-style:none}
    ============================================================ */
 .hero{margin-bottom:2.5rem}
 .hero-top{display:flex;gap:1.5rem;align-items:flex-start}
-/* The portrait. Swap photo.jpg in the repo to change it; the file is a
-   square image, displayed as a circle. Keep it square or the crop will
-   favour the centre and cut the top of the head. */
 .monogram{
-  flex:0 0 108px;width:108px;height:108px;border-radius:50%;
-  object-fit:cover;display:block;
-  background:var(--bg-sunken);
+  flex:0 0 84px;width:84px;height:84px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:grid;place-items:center;
+  font-family:var(--serif);font-size:1.9rem;font-weight:600;letter-spacing:.02em;
   box-shadow:var(--shadow);
-  border:3px solid var(--bg-raised);
-  outline:1px solid var(--rule);outline-offset:-3px;
 }
 h1{font-size:clamp(1.85rem,4.6vw,2.6rem);font-weight:700;letter-spacing:-.02em}
 .hero-title{font-family:var(--serif);font-size:1.07rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.45}
@@ -211,12 +206,6 @@ h3.sub{
 }
 h3.sub:first-of-type{margin-top:0}
 
-/* ---- running prose ---- */
-.prose{font-size:.985rem;line-height:1.72;color:var(--ink-soft);max-width:66ch}
-.prose + .prose{margin-top:.95rem}
-.prose strong{color:var(--ink);font-weight:600}
-.prose em{font-family:var(--serif);font-size:1.02em}
-
 /* ---- key/value grid ---- */
 .kv{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1.1rem;font-size:.94rem}
 .kv dt{color:var(--ink-faint);font-size:.86rem;white-space:nowrap}
@@ -238,40 +227,6 @@ h3.sub:first-of-type{margin-top:0}
   background:var(--accent-soft);color:var(--accent-ink);border:1px solid transparent;
 }
 .tag-plain{background:var(--bg-sunken);color:var(--ink-soft);border-color:var(--rule)}
-
-/* ---- courses & resources ---- */
-.course{padding:1.15rem 0;border-bottom:1px solid var(--rule)}
-.course:last-child{border-bottom:0}
-.course-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.35rem 1rem;align-items:baseline}
-.course-title{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--ink)}
-.course-code{
-  font-size:.72rem;font-family:var(--sans);letter-spacing:.04em;color:var(--ink-faint);
-  background:var(--bg-sunken);border:1px solid var(--rule);border-radius:5px;
-  padding:.13rem .45rem;white-space:nowrap;
-}
-.course-meta{font-size:.855rem;color:var(--ink-faint);margin-top:.2rem}
-.course-desc{font-size:.925rem;line-height:1.62;color:var(--ink-soft);margin-top:.55rem;max-width:64ch}
-.course-files{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.45rem}
-.res{
-  display:inline-flex;align-items:center;gap:.45rem;
-  font-size:.835rem;padding:.33rem .62rem .33rem .4rem;border-radius:7px;
-  border:1px solid var(--rule-strong);background:var(--bg-raised);color:var(--ink-soft);
-  transition:border-color .15s, color .15s, transform .15s;
-}
-.res:hover{text-decoration:none;border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
-.res-t{
-  font-family:var(--sans);font-size:.61rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
-  padding:.15rem .36rem;border-radius:4px;
-  background:var(--bg-sunken);color:var(--ink-faint);border:1px solid var(--rule);
-}
-.res:hover .res-t{border-color:currentColor;color:var(--accent)}
-.res-pdf .res-t{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
-.teach-note{
-  margin-top:1.7rem;font-size:.86rem;line-height:1.62;color:var(--ink-faint);
-  background:var(--bg-sunken);border:1px solid var(--rule);border-radius:9px;
-  padding:.85rem 1rem;
-}
-.teach-note b{color:var(--ink-soft);font-weight:600}
 
 /* ---- timeline ---- */
 .timeline{position:relative;padding-left:1.35rem}
@@ -363,6 +318,13 @@ h3.sub:first-of-type{margin-top:0}
 .prose{font-size:.95rem;line-height:1.7;color:var(--ink-soft)}
 .prose strong{color:var(--ink);font-weight:600}
 
+/* ---- teaching ---- */
+.teaching-group{margin:1.5rem 0 2rem}
+.teaching-inst{font-size:1.05rem;line-height:1.45;color:var(--ink)}
+.teaching-meta{font-size:.87rem;color:var(--ink-soft);margin-top:.15rem}
+.teaching-load{font-size:.8rem;color:var(--ink-faint);margin-top:.15rem}
+.teaching-supervision{font-size:.88rem;margin:.65rem 0 0}
+
 /* ---- footer ---- */
 footer{
   margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--rule);
@@ -385,7 +347,7 @@ footer{
   .topbar{display:flex}
   .main{padding:1.75rem 1rem 4rem;max-width:100%}
   .hero-top{gap:1.1rem}
-  .monogram{flex-basis:76px;width:76px;height:76px;border-width:2px}
+  .monogram{flex-basis:62px;width:62px;height:62px;font-size:1.4rem}
   .pub-n{flex-basis:1.5rem}
 }
 @media (max-width:520px){
@@ -402,10 +364,7 @@ footer{
   .sidebar,.topbar,.drawer,.actions,.theme-btn{display:none!important}
   .main{padding:0;max-width:100%}
   section{margin-top:1.6rem;page-break-inside:avoid}
-  .pub,.degree,.entries li,.course{page-break-inside:avoid}
-  .res{border:0;padding:0;background:none;font-size:.78rem}
-  .res-t{border:0;background:none;padding:0;margin-right:.15rem}
-  .teach-note{border:1px solid #ccc;background:none}
+  .pub,.degree,.entries li{page-break-inside:avoid}
   a{color:#000}
   .chip{border:0;padding:0;background:none;font-size:.7rem}
 }
@@ -423,11 +382,10 @@ footer{
 </div>
 <nav class="drawer" id="drawer" aria-label="Sections">
   <a href="#about">About</a>
-  <a href="#contact">Contact &amp; Links</a>
   <a href="#research">Research Areas</a>
-  <a href="#teaching">Courses &amp; Resources</a>
   <a href="#experience">Experience</a>
-  <a href="#education">Education &amp; Qualifications</a>
+  <a href="#education">PhD and HDR</a>
+  <a href="#teaching">Teaching</a>
   <a href="#publications">Publications</a>
   <a href="#submissions">Under Review</a>
   <a href="#committees">Scientific Committees</a>
@@ -449,11 +407,10 @@ footer{
     </a>
     <nav class="nav" id="nav" aria-label="Page sections">
       <a href="#about">About</a>
-      <a href="#contact">Contact &amp; Links</a>
       <a href="#research">Research Areas</a>
-      <a href="#teaching">Courses &amp; Resources</a>
       <a href="#experience">Experience</a>
-      <a href="#education">Education &amp; Qualifications</a>
+      <a href="#education">PhD and HDR</a>
+      <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
       <a href="#submissions">Under Review</a>
       <a href="#committees">Scientific Committees</a>
@@ -480,8 +437,7 @@ footer{
     <!-- HERO -->
     <header class="hero">
       <div class="hero-top">
-        <img class="monogram" src="photo.jpg" width="512" height="512"
-             alt="Portrait of Farouk Mselmi" decoding="async">
+        <div class="monogram" aria-hidden="true">FM</div>
         <div>
           <h1>Farouk Mselmi</h1>
           <div class="hero-title">Associate Professor of Mathematical Statistics</div>
@@ -497,7 +453,6 @@ footer{
       </p>
 
       <div class="actions">
-        <a class="btn btn-primary" href="CV_MSELMI_Farouk.pdf" target="_blank" rel="noopener">Download full CV (PDF)</a>
         <a class="btn" href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a>
         <a class="btn" href="https://orcid.org/0000-0003-1881-7046" target="_blank" rel="noopener">ORCID</a>
         <a class="btn" href="https://www.researchgate.net/profile/Farouk_Mselmi" target="_blank" rel="noopener">ResearchGate</a>
@@ -509,60 +464,22 @@ footer{
         <div class="stat"><div class="stat-n">3</div><div class="stat-l">Chapters &amp; proceedings</div></div>
         <div class="stat"><div class="stat-n">4</div><div class="stat-l">Under review</div></div>
         <div class="stat"><div class="stat-n">2</div><div class="stat-l">Funded projects</div></div>
+        <div class="stat"><div class="stat-n">PhD</div><div class="stat-l">Doctorate, 2015</div></div>
         <div class="stat"><div class="stat-n">HDR</div><div class="stat-l">Habilitation, 2023</div></div>
       </div>
     </header>
 
     <!-- ========================================================
-         ABOUT
+         ABOUT / PERSONAL INFORMATION
          --------------------------------------------------------
-         Two parts: a short prose introduction written for
-         visitors, then the personal details taken from the CV
-         (gender, date and place of birth, citizenship, family
-         situation, mobile number).
-
-         To take the personal details off the public page, delete
-         only the <h3 class="sub">Personal details</h3> heading and
-         the <dl class="kv"> list that follows it — the prose
-         introduction above them stays. Deleting the whole
-         <section> would remove the introduction too, and would
-         also need the two "About" entries in the sidebar and
-         drawer menus removed.
+         NOTE: this section reproduces the personal details from
+         the CV (gender, date and place of birth, citizenship,
+         family situation, mobile number). To remove them from the
+         public page, delete this whole <section> block and its
+         two matching entries in the sidebar and drawer menus.
          ======================================================== -->
     <section id="about">
       <div class="sec-head"><h2>About</h2></div>
-
-      <p class="prose">
-        I am an Associate Professor of Mathematical Statistics at the Euromed Polytechnic
-        School of the Euro-Mediterranean University of Fez, Morocco. I joined Euromed in 2021,
-        after posts at King Saud University in Riyadh and at the universities of Sfax and
-        Gabès in Tunisia. I hold a <em>Habilitation à Diriger des Recherches</em> from
-        Burgundy-Franche-Comté University (2023) and the French CNU qualifications for
-        <em>Maître de Conférences</em> and <em>Professeur</em>.
-      </p>
-
-      <p class="prose">
-        My work sits where probability theory meets statistical inference. I am interested in
-        randomness that carries structure — randomness built from a subordinator, a Markov
-        kernel, or a mixture — and in how such models can be estimated from data: natural
-        exponential families and their variance functions, generalized linear models for
-        subordinated Lévy and Markov-kernel families, nonparametric and kernel estimation,
-        and stable processes. Much of it is pulled forward by concrete problems, and in recent
-        years those have come from finance, urban mobility and supply chain management,
-        including two funded projects on logistics and mobility in Mediterranean cities.
-      </p>
-
-      <p class="prose">
-        I teach mathematics and statistics in the preparatory and engineering cycles, coordinate
-        several teaching modules, and supervise Master's theses and final-year engineering
-        projects. Lecture notes, problem sets and reading lists are gathered under
-        <a href="#teaching">Courses &amp; Resources</a> — students and colleagues are welcome
-        to use them freely. If you would like to discuss a research question, a thesis topic or
-        a possible collaboration, <a href="mailto:f.mselmi@ueuromed.org">e-mail</a> is the
-        quickest way to reach me.
-      </p>
-
-      <h3 class="sub">Personal details</h3>
       <dl class="kv">
         <dt>Position</dt><dd>Associate Professor, Euro-Mediterranean University of Fez, Morocco (since Sep. 2026)</dd>
         <dt>Gender</dt><dd>Male</dd>
@@ -572,38 +489,6 @@ footer{
         <dt>Family</dt><dd>Married, one son, one daughter</dd>
         <dt>Phone</dt><dd><a href="tel:+212611535245">+212 611 535 245</a></dd>
         <dt>Languages</dt><dd>Arabic (native), English (fluent), French (fluent)</dd>
-      </dl>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="sec-head"><h2>Contact &amp; Links</h2></div>
-      <div class="cards">
-        <div class="card">
-          <h4>Professional address</h4>
-          <address>
-            Building B4, Office 2.39<br>
-            Euro-Mediterranean University<br>
-            Roundabout Bensouda, Meknes Road<br>
-            Fez, Morocco
-          </address>
-        </div>
-        <div class="card">
-          <h4>Personal address</h4>
-          <address>
-            Apartment 25, Prestige 2 Residence<br>
-            17 Abou Baker Zniber street<br>
-            V.N. Champ de course<br>
-            Fez, Morocco
-          </address>
-        </div>
-      </div>
-      <dl class="kv" style="margin-top:1.1rem">
-        <dt>Affiliation</dt><dd>Euro-Mediterranean University, Morocco</dd>
-        <dt>Institutional e-mail</dt><dd><a href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a></dd>
-        <dt>Personal e-mail</dt><dd><a href="mailto:mselmi.farouk@gmail.com">mselmi.farouk@gmail.com</a></dd>
-        <dt>ORCID</dt><dd><a href="https://orcid.org/0000-0003-1881-7046" target="_blank" rel="noopener">0000-0003-1881-7046</a></dd>
-        <dt>ResearchGate</dt><dd><a href="https://www.researchgate.net/profile/Farouk_Mselmi" target="_blank" rel="noopener">profile/Farouk_Mselmi</a></dd>
       </dl>
     </section>
 
@@ -620,56 +505,6 @@ footer{
         <span class="tag">Variance Functions</span>
         <span class="tag">Stable Processes</span>
       </div>
-    </section>
-
-    <!-- ========================================================
-         COURSES & RESOURCES
-         --------------------------------------------------------
-         HOW TO ADD A COURSE
-         Copy one <article class="course"> block below, change the
-         fields, and drop the files into the matching folder in
-         courses/ . Newest or current courses go at the top.
-
-         <article class="course">
-           <div class="course-head">
-             <h4 class="course-title">Course name</h4>
-             <span class="course-code">Cycle · Semester</span>
-           </div>
-           <div class="course-meta">Programme · Academic year</div>
-           <p class="course-desc">One or two sentences on what the
-              course covers and who it is for.</p>
-           <div class="course-files">
-             <a class="res res-pdf" href="courses/folder/notes.pdf"><span class="res-t">PDF</span> Lecture notes</a>
-             <a class="res res-pdf" href="courses/folder/sheet-1.pdf"><span class="res-t">PDF</span> Problem sheet 1</a>
-             <a class="res" href="courses/folder/slides.pdf"><span class="res-t">Slides</span> Chapter 1</a>
-             <a class="res" href="courses/folder/data.csv"><span class="res-t">Data</span> Example dataset</a>
-             <a class="res" href="https://example.org" target="_blank" rel="noopener"><span class="res-t">Link</span> Reading list</a>
-           </div>
-         </article>
-
-         The res-t label is free text — PDF, Slides, Data, Code,
-         Link, Exam, Solutions. Add class="res-pdf" to tint it in
-         the accent colour; leave it off for a neutral label.
-         Use target="_blank" rel="noopener" only for links that
-         leave the site.
-         ======================================================== -->
-    <section id="teaching">
-      <div class="sec-head"><h2>Courses &amp; Resources</h2></div>
-
-      <p class="prose">
-        Teaching material for the courses I give at the Euromed Polytechnic School — lecture
-        notes, problem sheets, slides and the occasional dataset. Everything on this page is
-        free to download, and students are welcome to pass it on.
-      </p>
-
-      <!-- course cards go here -->
-
-      <p class="teach-note">
-        <b>A note on use.</b> These notes are shared for study. You are free to download, print
-        and circulate them; if you reuse any part in your own teaching or writing, please credit
-        the source. Errors are mine — if you find one, I would be glad to hear about it at
-        <a href="mailto:f.mselmi@ueuromed.org">f.mselmi@ueuromed.org</a>.
-      </p>
     </section>
 
     <!-- EXPERIENCE -->
@@ -711,15 +546,29 @@ footer{
 
     <!-- EDUCATION -->
     <section id="education">
-      <div class="sec-head"><h2>Education &amp; Qualifications</h2></div>
+      <div class="sec-head"><h2>PhD and HDR</h2></div>
 
       <div class="degree">
         <div class="degree-head">
-          <div class="degree-name">French qualifications for <em>Maître de Conférences</em> and <em>Professeur</em></div>
-          <div class="degree-date">2024</div>
+          <div class="degree-name">Ph.D. in Mathematics — Probability and Statistics</div>
+          <div class="degree-date">Sep. 2012 — 18 Dec. 2015</div>
         </div>
-        <div class="degree-inst">Conseil National des Universités (CNU), section 26 — France</div>
-        <div class="degree-thesis">Qualification numbers — PR: 24126372697 · MCF: 22226372697</div>
+        <div class="degree-inst">Sfax University, Tunisia</div>
+        <div class="degree-thesis"><em>Multivariate normal α-stable distributions</em></div>
+        <div class="degree-thesis" style="font-size:.88rem;color:var(--ink-soft)">Advisor: Afif Masmoudi · Co-advisor: Mahdi Louati</div>
+        <details class="jury">
+          <summary>Jury members</summary>
+          <ul>
+            <li><b>Pr. Mokhless Hammami</b> — President, Sfax University, Tunisia</li>
+            <li><b>Pr. Sonia Fourati</b> — Reviewer, Rouen Normandy University, France</li>
+            <li><b>Pr. Mohamed Ali Hammami</b> — Reviewer, Sfax University, Tunisia</li>
+            <li><b>Pr. Bassem Ben Hamed</b> — Examiner, Sfax University, Tunisia</li>
+          </ul>
+        </details>
+        <div class="pub-links" style="margin-top:.55rem">
+          <a class="btn" href="FaroukMSELMIthesis.pdf" download="FaroukMSELMIthesis.pdf">Download PhD thesis (PDF)</a>
+          <a class="chip" href="https://www.researchgate.net/publication/324775442_Multivariate_Normal_a-Stable_Distributions" target="_blank" rel="noopener">ResearchGate</a>
+        </div>
       </div>
 
       <div class="degree">
@@ -741,30 +590,18 @@ footer{
           </ul>
         </details>
         <div class="pub-links" style="margin-top:.55rem">
+          <a class="btn" href="HDR-MEM.pdf" download="HDR-MEM.pdf">Download HDR memoir (PDF)</a>
           <a class="chip" href="https://theses.hal.science/tel-04069084/" target="_blank" rel="noopener">HAL · tel-04069084</a>
         </div>
       </div>
 
       <div class="degree">
         <div class="degree-head">
-          <div class="degree-name">Ph.D. in Mathematics — Probability and Statistics</div>
-          <div class="degree-date">Sep. 2012 — 18 Dec. 2015</div>
+          <div class="degree-name">French qualifications for <em>Maître de Conférences</em> and <em>Professeur</em></div>
+          <div class="degree-date">2024</div>
         </div>
-        <div class="degree-inst">Sfax University, Tunisia</div>
-        <div class="degree-thesis"><em>Multivariate normal α-stable distributions</em></div>
-        <div class="degree-thesis" style="font-size:.88rem;color:var(--ink-soft)">Advisor: Afif Masmoudi · Co-advisor: Mahdi Louati</div>
-        <details class="jury">
-          <summary>Jury members</summary>
-          <ul>
-            <li><b>Pr. Mokhless Hammami</b> — President, Sfax University, Tunisia</li>
-            <li><b>Pr. Sonia Fourati</b> — Reviewer, Rouen Normandy University, France</li>
-            <li><b>Pr. Mohamed Ali Hammami</b> — Reviewer, Sfax University, Tunisia</li>
-            <li><b>Pr. Bassem Ben Hamed</b> — Examiner, Sfax University, Tunisia</li>
-          </ul>
-        </details>
-        <div class="pub-links" style="margin-top:.55rem">
-          <a class="chip" href="https://www.researchgate.net/publication/324775442_Multivariate_Normal_a-Stable_Distributions" target="_blank" rel="noopener">ResearchGate</a>
-        </div>
+        <div class="degree-inst">Conseil National des Universités (CNU), section 26 — France</div>
+        <div class="degree-thesis">Qualification numbers — PR: 24126372697 · MCF: 22226372697</div>
       </div>
 
       <div class="degree">
@@ -792,6 +629,132 @@ footer{
         </div>
         <div class="degree-inst">Ain Drahem High School, Tunisia</div>
       </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <div class="sec-head"><h2>Teaching</h2></div>
+      <h3 class="sub">Courses &amp; supervision</h3>
+      <div class="teaching-group">
+        <h4 class="teaching-inst">Euro-Mediterranean University, Fez, Morocco</h4>
+        <ul class="entries">
+          <li>
+            <strong>Algebra</strong>
+            <div class="teaching-meta">Preparatory cycle for engineering studies</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Calculus</strong>
+            <div class="teaching-meta">Preparatory cycle for engineering studies</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Probability and statistical modeling</strong>
+            <div class="teaching-meta">Civil engineering degree</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Applied statistical modeling and data analysis</strong>
+            <div class="teaching-meta">Master’s degree in environmental engineering and water management</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Applied statistics</strong>
+            <div class="teaching-meta">Master’s degree in sustainable transport and mobility</div>
+            <div class="teaching-load">2 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Applied probability and stochastic processes</strong>
+            <div class="teaching-meta">Master’s degree in entrepreneurial support and technological management</div>
+            <div class="teaching-load">2 hours/week · 14 weeks</div>
+          </li>
+        </ul>
+        <p class="prose teaching-supervision">Postgraduate supervision in transport and sustainable mobility.</p>
+        <p class="prose teaching-supervision">Postgraduate supervision in entrepreneurial coaching and technology management.</p>
+      </div>
+      <div class="teaching-group">
+        <h4 class="teaching-inst">King Saud University, Riyadh, Saudi Arabia</h4>
+        <ul class="entries">
+          <li>
+            <strong>Biostatistics</strong>
+            <div class="teaching-meta">Preparatory cycle of health studies</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Probability and statistics</strong>
+            <div class="teaching-meta">Bachelor’s degree in statistics</div>
+            <div class="teaching-load">6 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Actuarial probability + SOA P-Exam</strong>
+            <div class="teaching-meta">Bachelor’s degree in actuarial studies</div>
+            <div class="teaching-load">6 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>MATLAB</strong>
+            <div class="teaching-meta">Bachelor’s degree in statistics</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+        </ul>
+        <p class="prose teaching-supervision">Undergraduate supervision in statistics.</p>
+      </div>
+      <div class="teaching-group">
+        <h4 class="teaching-inst">Sfax University, Sfax, Tunisia</h4>
+        <ul class="entries">
+          <li>
+            <strong>Probability and statistics</strong>
+            <div class="teaching-meta">Bachelor’s degree in computer networks</div>
+            <div class="teaching-load">4.5 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Probability and statistics</strong>
+            <div class="teaching-meta">Bachelor’s degree in financial mathematics</div>
+            <div class="teaching-load">4.5 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Probability and statistics</strong>
+            <div class="teaching-meta">Computer science engineering degree</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Calculus</strong>
+            <div class="teaching-meta">Computer science engineering degree</div>
+            <div class="teaching-load">4 hours/week · 14 weeks</div>
+          </li>
+          <li>
+            <strong>Statistics</strong>
+            <div class="teaching-meta">Master’s degree in applied mathematics</div>
+            <div class="teaching-load">2 hours/week · 14 weeks</div>
+          </li>
+        </ul>
+        <p class="prose teaching-supervision">Undergraduate supervision in financial mathematics.</p>
+      </div>
+      <div class="teaching-group">
+        <h4 class="teaching-inst">Gabes University, Gabes, Tunisia</h4>
+        <ul class="entries">
+          <li>
+            <strong>Algebra</strong>
+            <div class="teaching-meta">Preparatory cycle for engineering studies</div>
+            <div class="teaching-load">6 hours/week · 28 weeks</div>
+          </li>
+          <li>
+            <strong>Calculus</strong>
+            <div class="teaching-meta">Preparatory cycle for engineering studies</div>
+            <div class="teaching-load">6 hours/week · 28 weeks</div>
+          </li>
+        </ul>
+      </div>
+      <h3 class="sub">Teaching philosophy</h3>
+      <p class="prose">My teaching in Mathematical Statistics aims to build deep understanding, critical thinking and problem-solving skills, and to prepare students for their professional lives. Six principles guide my approach:</p>
+      <ul class="entries">
+        <li><strong>Conceptual understanding.</strong> I emphasize the fundamental principles of Probability and Statistics so that students understand the ideas behind formulas and procedures and can apply their knowledge creatively.</li>
+        <li><strong>Real-world application.</strong> I connect theory to concrete examples and practical situations, helping students understand its uses, stay engaged and prepare for real-world challenges.</li>
+        <li><strong>Active learning and student engagement.</strong> Group discussions and hands-on data analysis projects give students an active role in learning and develop their problem-solving and analytical skills.</li>
+        <li><strong>Effective communication.</strong> I explain complex concepts clearly through demonstrations and practical illustrations, and encourage students to share their ideas and ask questions to strengthen their own communication skills.</li>
+        <li><strong>Technology integration.</strong> I integrate MATLAB and R into the curriculum, giving students practical experience with statistical software, authentic data analysis and modeling.</li>
+        <li><strong>Continual advancement.</strong> I regularly seek student feedback and use it to improve my teaching methods and the learning experience.</li>
+      </ul>
+      <p class="prose" style="margin-top:1rem">My goal is to equip students with a strong foundation in Probability and Statistics, the confidence to succeed in Mathematical Statistics, and the skills to make a positive contribution in their chosen fields and in society.</p>
     </section>
 
     <!-- PUBLICATIONS -->
@@ -1248,7 +1211,7 @@ footer{
 
     <footer>
       <span>© <span id="yr">2026</span> Farouk Mselmi · Euro-Mediterranean University of Fez</span>
-      <span><a href="CV_MSELMI_Farouk.pdf" target="_blank" rel="noopener">Full CV (PDF)</a> · Last updated October 2026</span>
+      <span>Last updated October 2026</span>
     </footer>
 
   </main>
