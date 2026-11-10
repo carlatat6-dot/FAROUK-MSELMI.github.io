@@ -27,14 +27,14 @@
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#17191d;--bg-raised:#202329;--bg-sunken:#121417;
   --ink:#eee9e1;--ink-soft:#c3bdb4;--ink-faint:#a29a90;
-  --rule:#34373d;--rule-strong:#51535a;--accent:#e6a0ae;
-  --accent-soft:#34242c;--accent-ink:#f3bac5;--shadow:0 16px 44px -24px #000;
+  --rule:#34373d;--rule-strong:#51535a;--accent:#79b4d9;
+  --accent-soft:#1c3545;--accent-ink:#b9dcf2;--shadow:0 16px 44px -24px #000;
 }}
 :root[data-theme="dark"]{
   --bg:#17191d;--bg-raised:#202329;--bg-sunken:#121417;
   --ink:#eee9e1;--ink-soft:#c3bdb4;--ink-faint:#a29a90;
-  --rule:#34373d;--rule-strong:#51535a;--accent:#e6a0ae;
-  --accent-soft:#34242c;--accent-ink:#f3bac5;--shadow:0 16px 44px -24px #000;
+  --rule:#34373d;--rule-strong:#51535a;--accent:#79b4d9;
+  --accent-soft:#1c3545;--accent-ink:#b9dcf2;--shadow:0 16px 44px -24px #000;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:30px;-webkit-text-size-adjust:100%}
@@ -69,7 +69,7 @@ button{font:inherit}img{display:block;max-width:100%}
 .theme-btn:hover{background:var(--accent-soft);transform:rotate(12deg)}
 /* Portrait-led introduction */
 .hero{padding-bottom:1rem}
-.hero-intro{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,1fr);gap:2.4rem;align-items:center}
+.hero-intro{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(190px,.72fr);gap:2.4rem;align-items:center}
 .eyebrow{display:flex;gap:.65rem;align-items:center;font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:1.3rem}
 .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;flex-shrink:0}
 h1{font-size:clamp(3.8rem,5.8vw,5.5rem);font-weight:600;line-height:.98;letter-spacing:-.065em;margin-bottom:1.5rem}
@@ -85,10 +85,10 @@ h1 span{display:block;color:var(--accent)}
 .actions{display:flex;flex-wrap:wrap;gap:.65rem 1rem;align-items:center;margin-top:1.2rem}
 .actions a{font-size:.72rem;color:var(--ink-soft);border-bottom:1px solid var(--rule-strong);overflow-wrap:anywhere;transition:color .2s,border-color .2s}
 .actions a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
-.portrait{position:relative;margin:0;padding:16px 0 0 16px;isolation:isolate}
-.portrait::before{content:"";position:absolute;inset:0 17px 40px 0;border:1px solid var(--rule-strong);border-radius:150px 150px 18px 18px;z-index:-1}
+.portrait{position:relative;margin:0;padding:12px 0 0 12px;max-width:270px;justify-self:end;isolation:isolate}
+.portrait::before{content:"";position:absolute;inset:0 12px 32px 0;border:1px solid var(--rule-strong);border-radius:14px;z-index:-1}
 .portrait::after{content:"";position:absolute;inset:15% -10px 30px 50%;background-image:radial-gradient(var(--rule-strong) 1px,transparent 1px);background-size:12px 12px;z-index:-2;opacity:.7}
-.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:150px 150px 14px 14px;box-shadow:var(--shadow)}
+.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:10px;box-shadow:var(--shadow)}
 .portrait figcaption{display:flex;align-items:center;gap:.5rem;margin:1rem 0 0;font-size:.68rem;letter-spacing:.07em;color:var(--ink-faint)}
 .portrait figcaption::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%}
 .stats{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:2.75rem}
@@ -175,7 +175,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;
 @media(prefers-reduced-motion:no-preference){.hero-copy{animation:arrive .8s both}.portrait{animation:arrive .9s .12s both}.stats{animation:arrive .8s .22s both}}
 @media(min-width:901px) and (max-width:1200px){
   .sidebar{width:214px;flex-basis:214px;padding-left:1.3rem;padding-right:1rem}
-  .main{padding:2.75rem 2rem 2rem}.hero-intro{gap:1.5rem;grid-template-columns:minmax(0,1.3fr) minmax(210px,1fr)}
+  .main{padding:2.75rem 2rem 2rem}.hero-intro{gap:1.5rem;grid-template-columns:minmax(0,1.5fr) minmax(190px,.72fr)}
   h1{font-size:4.25rem}.stats{gap:6px}.stat{padding:.85rem .6rem}.stat-l{font-size:.58rem}
 }
 @media(max-width:900px){
@@ -188,7 +188,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;
   .drawer a{display:block;padding:.6rem .1rem;font-size:.76rem;border-bottom:1px solid var(--rule);color:var(--ink-soft)}
   .drawer a.active{color:var(--accent);font-weight:600}
   .main{max-width:850px;margin:auto;padding:2.75rem 1.75rem 1rem}
-  .hero-intro{gap:2rem;grid-template-columns:minmax(0,1.3fr) minmax(220px,1fr)}
+  .hero-intro{gap:2rem;grid-template-columns:minmax(0,1.5fr) minmax(190px,.72fr)}
   h1{font-size:4.5rem}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.stat:last-child{grid-column:span 2}
   section{scroll-margin-top:5.5rem}
 }
@@ -198,8 +198,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;
   .eyebrow{order:1}h1{order:2}.portrait{order:3}.hero-title{order:4}.hero-affil{order:5}.hero-lede{order:6}.hero-ctas{order:7}.actions{order:8}
   .eyebrow{font-size:.6rem;margin-bottom:1.2rem}h1{font-size:4.4rem;margin-bottom:1.3rem}
   .hero-title{font-size:1.25rem;max-width:29ch}.hero-affil{font-size:.76rem}.hero-lede{font-size:.86rem}
-  .portrait{width:66%;max-width:250px;align-self:center;padding:13px 0 0 13px;margin:.4rem 0 1.7rem}
-  .portrait img{aspect-ratio:1/1.08}.portrait figcaption{font-size:.65rem}.portrait::after{right:-15px}
+  .portrait{width:58%;max-width:220px;align-self:center;justify-self:auto;padding:10px 0 0 10px;margin:.4rem 0 1.7rem}
+  .portrait img{aspect-ratio:4/5}.portrait figcaption{font-size:.65rem}.portrait::after{right:-15px}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:2rem}.stat{padding:1rem}.stat-l{font-size:.68rem}.stat-n{font-size:1.85rem}
   section{margin-top:3.2rem}.sec-head{gap:.45rem .6rem}.sec-head h2{font-size:1.5rem}.sec-head .count{margin-left:1.6rem;width:100%;font-size:.66rem}
   #research .tags{grid-template-columns:1fr}.tag{font-size:.74rem}
@@ -308,7 +308,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;
           </div>
         </div>
         <figure class="portrait">
-          <img src="farouk-mselmi.webp" alt="Portrait of Farouk Mselmi" width="1080" height="1080" fetchpriority="high" decoding="async">
+          <img src="photo.jpg" alt="Portrait of Farouk Mselmi" width="512" height="512" fetchpriority="high" decoding="async">
           <figcaption>Fez, Morocco</figcaption>
         </figure>
       </div>
